@@ -22,14 +22,14 @@ export default function AllRoutes(){
         <BrowserRouter>
         <Navbar/>
         <Routes>
-            <Route exact path='/' element={<App/>}/>
-                <Route path='/todo' element={<Todo/>}/>
-                <Route path='/user-crud' element={<Form/>}/>
-                <Route path='/todo/2.0' element={<Todo2/>}/>
-                <Route path='/get-image-by-text' element={<ImageByText/>}/>
-                <Route path='/search-companies' element={<Companies/>}/>
-                <Route path='/color-customize' element={<ColorCustomize/>}/>
-                <Route path='/trending-news' element={<NewsAPI/>}/>
+            <Route exact path='/react-learning/' element={<App/>}/>
+                <Route path='/react-learning/todo' element={<Todo/>}/>
+                <Route path='/react-learning/user-crud' element={<Form/>}/>
+                <Route path='/react-learning/todo/2.0' element={<Todo2/>}/>
+                <Route path='/react-learning/get-image-by-text' element={<ImageByText/>}/>
+                <Route path='/react-learning/search-companies' element={<Companies/>}/>
+                <Route path='/react-learning/color-customize' element={<ColorCustomize/>}/>
+                <Route path='/react-learning/trending-news' element={<NewsAPI/>}/>
                 <Route path='*' element={<ErrorPage/>}/>
         </Routes>
         </BrowserRouter>
