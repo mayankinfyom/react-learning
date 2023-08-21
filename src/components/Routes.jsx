@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {  HashRouter, Route, Routes } from "react-router-dom";
 import Todo from './Todo/Todo.jsx';
 import Form from './Form/Form';
 import Todo2 from './Todo2/Todo2';
@@ -19,7 +19,7 @@ export default function AllRoutes(){
 
     return (
         <div className="" style={{ backgroundColor: bgColor , color: textColor}}>
-        <BrowserRouter>
+        <HashRouter>
         <Navbar/>
         <Routes>
             <Route exact path='/react-learning/' element={<App/>}/>
@@ -32,7 +32,7 @@ export default function AllRoutes(){
                 <Route path='/react-learning/trending-news' element={<NewsAPI/>}/>
                 <Route path='*' element={<ErrorPage/>}/>
         </Routes>
-        </BrowserRouter>
+        </HashRouter>
         </div>
     );
 }
