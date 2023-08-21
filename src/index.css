@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.todo .nav-link.active{
+  background-color: #3c3e41;
+  color: #fff;
+}
