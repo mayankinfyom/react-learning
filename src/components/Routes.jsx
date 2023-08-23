@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {  HashRouter, Route, Routes } from "react-router-dom";
 import Todo from './Todo/Todo.jsx';
 import Form from './Form/Form';
@@ -11,7 +11,7 @@ import Companies from './Companies/Companies.jsx';
 import { useSelector } from "react-redux";
 import ColorCustomize from "./Redux/ColorCustomization/ColorCustomize.jsx"
 import App from "../App.js";
-import NewsAPI from "./NewsAPI/NewsAPI.jsx";
+import NewsAPI from "./Redux/NewsAPI/NewsAPI.jsx";
 
 export default function AllRoutes(){
 
@@ -22,14 +22,14 @@ export default function AllRoutes(){
         <HashRouter>
         <Navbar/>
         <Routes>
-            <Route exact path='/react-learning/' element={<App/>}/>
-                <Route path='/react-learning/todo' element={<Todo/>}/>
-                <Route path='/react-learning/user-crud' element={<Form/>}/>
-                <Route path='/react-learning/todo/2.0' element={<Todo2/>}/>
-                <Route path='/react-learning/get-image-by-text' element={<ImageByText/>}/>
-                <Route path='/react-learning/search-companies' element={<Companies/>}/>
-                <Route path='/react-learning/color-customize' element={<ColorCustomize/>}/>
-                <Route path='/react-learning/trending-news' element={<NewsAPI/>}/>
+            <Route exact path='/' element={<App/>}/>
+                <Route path='/todo' element={<Todo/>}/>
+                <Route path='/user-crud' element={<Form/>}/>
+                <Route path='/todo/2.0' element={<Todo2/>}/>
+                <Route path='/get-image-by-text' element={<ImageByText/>}/>
+                <Route path='/search-companies' element={<Companies/>}/>
+                <Route path='/color-customize' element={<ColorCustomize/>}/>
+                <Route path='/trending-news' element={<NewsAPI/>}/>
                 <Route path='*' element={<ErrorPage/>}/>
         </Routes>
         </HashRouter>

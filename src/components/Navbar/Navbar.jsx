@@ -11,22 +11,22 @@ export function Navbar() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/react-learning/">Home</Link>
+                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                 </li>
                 <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Apps
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><Link className="dropdown-item" to="/react-learning/todo">Todo</Link></li>
-                    <li><Link className="dropdown-item" to="/react-learning/todo/2.0">Todo 2.0</Link></li>
+                    <li><Link className="dropdown-item" to="/todo">Todo</Link></li>
+                    <li><Link className="dropdown-item" to="/todo/2.0">Todo 2.0</Link></li>
                     <li><hr className="dropdown-divider"/></li>
-                    <li><Link className="dropdown-item" to="/react-learning/user-crud">User CRUD</Link></li>
-                    <li><Link className="dropdown-item" to="/react-learning/get-image-by-text">Image by text</Link></li>
-                    <li><Link className="dropdown-item" to="/react-learning/search-companies">Search Companies</Link></li>
+                    <li><Link className="dropdown-item" to="/user-crud">User CRUD</Link></li>
+                    <li><Link className="dropdown-item" to="/get-image-by-text">Image by text</Link></li>
+                    <li><Link className="dropdown-item" to="/search-companies">Search Companies</Link></li>
                     <li><hr className="dropdown-divider"/></li>
-                    <li><Link className="dropdown-item" to="/react-learning/color-customize">Color Customization</Link></li>
-                    <li><Link className="dropdown-item" to="/react-learning/trending-news">News API</Link></li>
+                    <li><Link className="dropdown-item" to="/color-customize">Color Customization</Link></li>
+                    <li><Link className="dropdown-item" to="/trending-news">Live News</Link></li>
                 </ul>
                 </li>
             </ul>
