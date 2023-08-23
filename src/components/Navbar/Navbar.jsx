@@ -1,10 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { changeBgColor,changeTextColor } from "../../State/ActionCreators/index";
+
 
 export function Navbar() {
+    const dispatch = useDispatch();
+    const {color:{bgColor,textColor}} = useSelector(state => state);
+
    return <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-            <a className="navbar-brand" href="#">MY Apps</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
@@ -25,11 +30,15 @@ export function Navbar() {
                     <li><Link className="dropdown-item" to="/get-image-by-text">Image by text</Link></li>
                     <li><Link className="dropdown-item" to="/search-companies">Search Companies</Link></li>
                     <li><hr className="dropdown-divider"/></li>
-                    <li><Link className="dropdown-item" to="/color-customize">Color Customization</Link></li>
                     <li><Link className="dropdown-item" to="/trending-news">Live News</Link></li>
                 </ul>
                 </li>
             </ul>
+
+            <form className="d-flex">
+                    <input className="mx-2" type="color" name="bgColor" onChange={(e) => dispatch(changeBgColor(e.target.value))} value={bgColor}/>
+                    <input className="mx-2" type="color" name="textColor" onChange={(e) => dispatch(changeTextColor(e.target.value))} value={textColor}/>
+            </form>
             </div>
         </div>
         </nav>;

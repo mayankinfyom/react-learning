@@ -58,10 +58,6 @@ function Form() {
     }
 
     useEffect(()=>{
-
-    },[userList]);
-
-    useEffect(()=>{
         if(getUserFromLocalStorage){
             setUserList(JSON.parse(getUserFromLocalStorage));
         }

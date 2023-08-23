@@ -13,7 +13,7 @@ function Todo() {
 
     useEffect(() => {
         getFilteredArray();
-    })
+    },[todoObj,todoArray,show])
 
     function changeShowData(e){
         setShow(e.target.innerText.toLowerCase());

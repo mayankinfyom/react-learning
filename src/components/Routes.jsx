@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {  HashRouter, Route, Routes } from "react-router-dom";
 import Todo from './Todo/Todo.jsx';
 import Form from './Form/Form';
@@ -9,7 +9,6 @@ import ImageByText from './ImageByText/ImageByText.jsx';
 import Companies from './Companies/Companies.jsx';
 
 import { useSelector } from "react-redux";
-import ColorCustomize from "./Redux/ColorCustomization/ColorCustomize.jsx"
 import App from "../App.js";
 import NewsAPI from "./Redux/NewsAPI/NewsAPI.jsx";
 
@@ -18,7 +17,7 @@ export default function AllRoutes(){
     const {color:{bgColor,textColor}} = useSelector(state => state);
 
     return (
-        <div className="" style={{ backgroundColor: bgColor , color: textColor}}>
+        <div className="" style={{ backgroundColor: bgColor , color: textColor , minHeight:window.innerHeight+'px'}}>
         <HashRouter>
         <Navbar/>
         <Routes>
@@ -28,7 +27,6 @@ export default function AllRoutes(){
                 <Route path='/todo/2.0' element={<Todo2/>}/>
                 <Route path='/get-image-by-text' element={<ImageByText/>}/>
                 <Route path='/search-companies' element={<Companies/>}/>
-                <Route path='/color-customize' element={<ColorCustomize/>}/>
                 <Route path='/trending-news' element={<NewsAPI/>}/>
                 <Route path='*' element={<ErrorPage/>}/>
         </Routes>
