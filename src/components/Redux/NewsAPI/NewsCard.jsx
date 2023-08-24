@@ -8,15 +8,17 @@ export default function NewsAPI() {
         <div className="row row-cols-1 row-cols-md-3 g-4 m-2">
             {liveNews.map((news,index) => {
            return (
-            <div className="col-md-4 col-12" key={news.uri}>
-                <div className="card h-100">
+            <div className="col-lg-6 col-md-12 col-12" key={news.uri}>
+                <div className="card h-100 news-card">
                     <img src={news.image ?? 'https://w7.pngwing.com/pngs/748/607/png-transparent-news-media-newspaper-advertising-information-news-icon-text-orange-logo.png'} className="card-img-top" alt="..." height='300px'/>
                     <div className="card-body">
                         <h5 className="card-title">{news.title}</h5>
                         <p className="card-text">{news.body.split(" ").slice(0, 100).join(" ") + "..."}</p>
+
                     </div>
-                    <div className="card-footer">
+                    <div className="card-footer d-flex justify-content-between">
                         <small className="text-muted">{new Date(news.dateTime).toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' })}</small>
+                        <small className="text-muted">{news.source.uri}</small>
                     </div>
                 </div>
             </div>

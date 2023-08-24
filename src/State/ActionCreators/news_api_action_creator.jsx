@@ -21,7 +21,10 @@ export const fetchNews = (searchText) => async (dispatch) => {
                   {
                     sourceLocationUri: "http://en.wikipedia.org/wiki/India"
                   }
-              ]
+              ],
+              "$filter": {
+                "isDuplicate": "skipDuplicates"
+            }
             }
           };
     } else {
@@ -34,7 +37,10 @@ export const fetchNews = (searchText) => async (dispatch) => {
                 {
                   sourceLocationUri: "http://en.wikipedia.org/wiki/India"
                 }
-              ]
+              ],
+              "$filter": {
+                "isDuplicate": "skipDuplicates"
+            }
             }
           };
     }
@@ -49,7 +55,6 @@ export const fetchNews = (searchText) => async (dispatch) => {
 
     axios.post("https://newsapi.ai/api/v1/article/getArticles", requestBody)
     .then(response => {
-        console.log(response.data.articles.results);
         dispatch({
             type: "FETCH_NEWS",
             payload: response.data.articles.results

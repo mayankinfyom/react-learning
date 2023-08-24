@@ -1,7 +1,6 @@
 import React from "react";
 
 function CompanyResult(props){
-console.log(props);
     return  (
         <div className="container">
             <div className='m-5'>
