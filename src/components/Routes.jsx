@@ -11,6 +11,7 @@ import Companies from './Companies/Companies.jsx';
 import { useSelector } from "react-redux";
 import App from "../App.js";
 import NewsAPI from "./Redux/NewsAPI/NewsAPI.jsx";
+import ReduxCrud from "./Redux/CrudWithValidation/ReduxCrud.jsx";
 
 export default function AllRoutes(){
 
@@ -27,7 +28,8 @@ export default function AllRoutes(){
                 <Route path='/todo/2.0' element={<Todo2/>}/>
                 <Route path='/get-image-by-text' element={<ImageByText/>}/>
                 <Route path='/search-companies' element={<Companies/>}/>
-                <Route path='/trending-news' element={<NewsAPI/>}/>
+                <Route path='/live-news' element={<NewsAPI/>}/>
+                <Route path='/redux-crud' element={<ReduxCrud/>}/>
                 <Route path='*' element={<ErrorPage/>}/>
         </Routes>
         </HashRouter>

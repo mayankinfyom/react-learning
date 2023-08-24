@@ -1,7 +1,7 @@
 import React from "react";
 import DemoText from "./DemoText";
 import { useDispatch, useSelector } from "react-redux";
-import { changeBgColor,changeTextColor } from "../../../State/ActionCreators/index";
+import { changeBgColor,changeTextColor } from "../../../State/ActionCreators/color_customize_action_creator";
 
 export default function ColorCustomize() {
 

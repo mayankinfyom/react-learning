@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { changeBgColor,changeTextColor } from "../../State/ActionCreators/index";
+import { changeBgColor,changeTextColor } from "../../State/ActionCreators/color_customize_action_creator";
 
 
 export function Navbar() {
@@ -30,7 +30,8 @@ export function Navbar() {
                     <li><Link className="dropdown-item" to="/get-image-by-text">Image by text</Link></li>
                     <li><Link className="dropdown-item" to="/search-companies">Search Companies</Link></li>
                     <li><hr className="dropdown-divider"/></li>
-                    <li><Link className="dropdown-item" to="/trending-news">Live News</Link></li>
+                    <li><Link className="dropdown-item" to="/live-news">Live News</Link></li>
+                    {/* <li><Link className="dropdown-item" to="/redux-crud">Redux CRUD</Link></li> */}
                 </ul>
                 </li>
             </ul>
