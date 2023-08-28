@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const fetchUser = () => (dispatch) => {
     try {
-        axios.get('http://localhost:4000/profile')
+        axios.get('https://my-json-server.typicode.com/mayankinfyom/react-learning/profile')
         .then((response) => {
             dispatch({
                 type: 'GET_USER',
@@ -17,7 +17,7 @@ export const fetchUser = () => (dispatch) => {
 
 export const createUser = (data) => (dispatch) => {
     try {
-        axios.post('http://localhost:4000/profile', data)
+        axios.post('https://my-json-server.typicode.com/mayankinfyom/react-learning/profile', data)
         .then((response) => {
             dispatch(fetchUser());
         });
@@ -30,7 +30,7 @@ export const createUser = (data) => (dispatch) => {
 export const updateUser = (data) => (dispatch) => {
 
     try {
-        axios.put(`http://localhost:4000/profile/${data.id}`, data)
+        axios.put(`https://my-json-server.typicode.com/mayankinfyom/react-learning/profile/${data.id}`, data)
         .then((response) => {
             dispatch(fetchUser());
         });
@@ -43,7 +43,7 @@ export const updateUser = (data) => (dispatch) => {
 export const deleteUser = (id) => (dispatch) => {
 
     try {
-        axios.delete(`http://localhost:4000/profile/${id}`)
+        axios.delete(`https://my-json-server.typicode.com/mayankinfyom/react-learning/profile/${id}`)
         .then((response) => {
             dispatch(fetchUser());
         });

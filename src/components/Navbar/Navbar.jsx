@@ -28,7 +28,7 @@ export function Navbar() {
                     <li><hr className="dropdown-divider"/></li>
                     <li><Link className="dropdown-item" to="/user-crud">User CRUD</Link></li>
                     <li><Link className="dropdown-item" to="/get-image-by-text">Image by text</Link></li>
-                    <li><Link className="dropdown-item" to="/search-companies">Search Companies</Link></li>
+                    {/* <li><Link className="dropdown-item" to="/search-companies">Search Companies</Link></li> */}
                     <li><hr className="dropdown-divider"/></li>
                     <li><Link className="dropdown-item" to="/live-news">Live News</Link></li>
                     {/* <li><Link className="dropdown-item" to="/redux-crud">Redux CRUD</Link></li> */}
